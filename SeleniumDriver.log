@@ -1,0 +1,6 @@
+05/17/2020 12:00:37 PM: INFO: with locator : Loginlocator Type : link
+05/17/2020 12:00:37 PM: INFO: Clicked on element with locator: Login locatorType: link
+05/17/2020 12:01:10 PM: INFO: with locator : user_emaillocator Type : id
+05/17/2020 12:01:10 PM: ERROR: Cannot send data on the element with locator : user_emaillocator Type : id
+05/17/2020 12:01:10 PM: ERROR: Cannot send data on the element with locator : user_passwordlocator Type : id
+05/17/2020 12:01:10 PM: ERROR: Cannot click on the element with locator: commit locatorType: name
