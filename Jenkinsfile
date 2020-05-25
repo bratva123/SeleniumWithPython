@@ -10,6 +10,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing'
+                sh 'apt-get install -y xvfb'
                 sh 'pip install pytest'
                 sh 'pip install PyVirtualDisplay'
                 sh 'pip install selenium'
