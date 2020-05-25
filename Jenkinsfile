@@ -13,7 +13,7 @@ pipeline {
                 sh 'pip install PyVirtualDisplay'
                 sh 'pip install selenium'
                 sh 'pip install pytest'
-                sh 'python -m  tests/home/login_tests.py '
+                sh 'py.test  tests/home/login_tests.py '
             }
         }
         stage('Deploy') {
