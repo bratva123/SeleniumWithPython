@@ -1,5 +1,9 @@
+from pyvirtualdisplay import Display
 from selenium import webdriver
 def oneTimeSetUp():
+
+        display = Display(visible=1)
+        display.start()
         baseURL = "https://letskodeit.teachable.com/"
         driver = webdriver.Chrome()
         driver.get(baseURL)
