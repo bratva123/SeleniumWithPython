@@ -12,7 +12,7 @@ pipeline {
                 echo 'Testing'
                 sh 'pip install PyVirtualDisplay'
                 sh 'pip install selenium'
-                sh 'pip install pytest'
+                sh 'pip install -u pytest'
                 sh 'pytest -m  tests/home/login_tests.py '
             }
         }
