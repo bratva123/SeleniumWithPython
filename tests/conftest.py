@@ -1,5 +1,4 @@
 from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManage
 def oneTimeSetUp():
 #         os.chmod('./chromedriver', 755)
 
@@ -7,7 +6,7 @@ def oneTimeSetUp():
 #         display.start()
         baseURL = "https://letskodeit.teachable.com/"
         print("before webdriver")
-        driver = webdriver.Chrome(ChromeDriverManager().install())
+        driver = webdriver.Chrome()
         print("after webdriver")
         driver.get(baseURL)
         driver.maximize_window()
