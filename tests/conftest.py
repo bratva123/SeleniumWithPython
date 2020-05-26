@@ -1,6 +1,6 @@
 # from pyvirtualdisplay import Display
 from selenium import webdriver
-import os
+from webdriver_manager.chrome import ChromeDriverManage
 def oneTimeSetUp():
         opts = webdriver.ChromeOptions()
         opts.add_argument('--no-sandbox')
@@ -15,7 +15,7 @@ def oneTimeSetUp():
 #         display.start()
         baseURL = "https://letskodeit.teachable.com/"
         print("before webdriver")
-        driver = webdriver.Chrome(options=opts)
+        driver = webdriver.Chrome(options=opts,ChromeDriverManager().install())
         print("after webdriver")
         
         driver = webdriver.Chrome(executable_path='./chromedriver')
