@@ -1,5 +1,5 @@
 from selenium import webdriver
-# from pyvirtualdisplay import Display
+from pyvirtualdisplay import Display
 
 def oneTimeSetUp():
         chrome_options = webdriver.ChromeOptions()
