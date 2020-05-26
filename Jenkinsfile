@@ -13,7 +13,7 @@ pipeline {
                 sh 'pip install pytest'
                 sh 'pip install selenium'
                 
-                sh 'python -m pytest tests/home/login_tests.py --html=report.html'
+                sh 'python -m pytest tests/home/login_tests.py'
             }
         }
         stage('Deploy') {
