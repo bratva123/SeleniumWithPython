@@ -9,7 +9,7 @@ def oneTimeSetUp():
 #         display.start()
         baseURL = "https://letskodeit.teachable.com/"
         print("before webdriver")
-        driver = webdriver.Chrome(executable_path='../chromedriver',options=opts)
+        driver = webdriver.Chrome(executable_path='./chromedriver',options=opts)
         print("after webdriver")
         
 #         driver = webdriver.Chrome(executable_path='./chromedriver')
