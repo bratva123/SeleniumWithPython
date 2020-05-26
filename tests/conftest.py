@@ -8,7 +8,7 @@ def oneTimeSetUp():
 #         display = Display(visible=1)
 #         display.start()
         baseURL = "https://letskodeit.teachable.com/"
-        driver = webdriver.Chrome(options=opts)
+        driver = webdriver.Chrome(executable_path='./chromedriver',options=opts)
 #         driver = webdriver.Chrome(executable_path='./chromedriver')
         driver.get(baseURL)
         driver.maximize_window()
