@@ -5,13 +5,13 @@ def oneTimeSetUp():
         opts = webdriver.ChromeOptions()
         opts.add_argument('--no-sandbox')
         opts.add_argument('--disable-dev-shm-usage')
-        os.chmod('./chromedriver', 755)
+#         os.chmod('./chromedriver', 755)
 
 #         display = Display(visible=1)
 #         display.start()
         baseURL = "https://letskodeit.teachable.com/"
         print("before webdriver")
-        driver = webdriver.Chrome(executable_path='./chromedriver',options=opts)
+        driver = webdriver.Chrome(options=opts)
         print("after webdriver")
         
 #         driver = webdriver.Chrome(executable_path='./chromedriver')
