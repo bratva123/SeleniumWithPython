@@ -6,7 +6,7 @@ def oneTimeSetUp():
         Display(visible=1, size=(1000, 1000)).start()
         chrome_options.add_argument('--disable-extensions')
         chrome_options.add_argument('--disable-dev-shm-usage')
-        chrome_options.add_argument('--headless')
+#         chrome_options.add_argument('--headless')
         chrome_options.add_argument('--no-sandbox')
         baseURL = "https://letskodeit.teachable.com/"
         print("before webdriver")
