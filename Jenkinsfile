@@ -12,6 +12,7 @@ pipeline {
                 echo 'Testing'
                 sh 'pip install pytest'
                 sh 'pip install selenium'
+                sh 'pip install pytest-html'
                 
                 sh 'python -m pytest tests/home/login_tests.py --html=reports_and_log/report.html'
             }
