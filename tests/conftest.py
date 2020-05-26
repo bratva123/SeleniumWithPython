@@ -1,12 +1,12 @@
 from selenium import webdriver
-def oneTimeSetUp():
-#         os.chmod('./chromedriver', 755)
 
-#         display = Display(visible=1)
-#         display.start()
+def oneTimeSetUp():
+        chrome_options = webdriver.ChromeOptions()
+        chrome_options.add_argument('--disable-extensions')
+        chrome_options.add_argument('--disable-dev-shm-usage')
         baseURL = "https://letskodeit.teachable.com/"
         print("before webdriver")
-        driver = webdriver.Chrome()
+        driver = webdriver.Chrome(chrome_options=chrome_options)
         print("after webdriver")
         driver.get(baseURL)
         driver.maximize_window()
