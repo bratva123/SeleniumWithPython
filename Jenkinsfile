@@ -10,6 +10,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing'
+                sh 'pip install webdriver-manager'
                 sh 'pip install pytest'
                 sh 'pip install PyVirtualDisplay'
                 sh 'pip install selenium'
