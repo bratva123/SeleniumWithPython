@@ -1,5 +1,5 @@
-from base.selenium_driver import SeleniumDriver
-import utilities.customLogger as cl
+from utilities.selenium_driver import SeleniumDriver
+import base.customLogger as cl
 import logging
 import  time
 
@@ -13,8 +13,8 @@ class LoginPage(SeleniumDriver):
 
     # Locators
     _login_link = "Login"
-    _email_field = "user_email"
-    _password_field = "user_password"
+    _email_field = "//input[@id='user_email']"
+    _password_field = "//input[@id = 'user_password']"
     _login_button = "commit"
 
     def clickLoginLink(self):
@@ -26,11 +26,11 @@ class LoginPage(SeleniumDriver):
         # print("befor login click")
 
     def enterEmail(self, email):
-        self.waitForElement(self._email_field)
-        self.sendKeys(email, self._email_field)
+        time.sleep(10)
+        self.sendKeys(email, "//input[@id='user_email']", locatorType="xpath")
 
     def enterPassword(self, password):
-        self.sendKeys(password, self._password_field)
+        self.sendKeys(password, self._password_field,locatorType='xpath')
 
     def clickLoginButton(self):
         self.elementClick(self._login_button, locatorType="name")
