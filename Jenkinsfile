@@ -10,13 +10,10 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing'
-                sh 'export DISPLAY=:4'
-                sh 'pip install webdriver-manager'
                 sh 'pip install pytest'
-                sh 'pip install PyVirtualDisplay'
                 sh 'pip install selenium'
                 
-                sh 'python -m pytest tests/home/login_tests.py'
+                sh 'python -m pytest tests/home/login_tests.py --html=report.html'
             }
         }
         stage('Deploy') {
