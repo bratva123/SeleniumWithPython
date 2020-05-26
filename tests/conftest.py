@@ -1,9 +1,11 @@
 # from pyvirtualdisplay import Display
 from selenium import webdriver
+import os
 def oneTimeSetUp():
         opts = webdriver.ChromeOptions()
         opts.add_argument('--no-sandbox')
         opts.add_argument('--disable-dev-shm-usage')
+        os.chmod('./chromedriver', 755)
 
 #         display = Display(visible=1)
 #         display.start()
