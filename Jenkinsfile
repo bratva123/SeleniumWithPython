@@ -12,7 +12,7 @@ pipeline {
                 echo 'Testing'
                 
                 
-                sh 'python -m pytest tests/home/login_tests.py --html=reports_and_log/report.html'
+                sh 'python -m  -s -v pytest tests/home/login_tests.py --html=reports_and_log/report.html'
             }
         }
         stage('Deploy') {
