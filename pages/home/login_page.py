@@ -43,6 +43,7 @@ class LoginPage(SeleniumDriver):
         self.clickLoginButton()
 
     def verifyLoginSuccessful(self):
+        time.sleep(10)
         result = self.isElementPresent("//a[contains(text(),'My Courses')]",
                                        locatorType="xpath")
         return result
