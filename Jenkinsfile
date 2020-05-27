@@ -26,7 +26,7 @@ pipeline {
     
     post {
         always {
-            emailtext attachmentsPattern: '/workspace/SeleniumWithPythonJob/reports_and_log/report.html', body: 'Hi \n Sending reports of testing', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Test'
+            emailext attachmentsPattern: '/workspace/SeleniumWithPythonJob/reports_and_log/report.html', body: 'Hi \n Sending reports of testing', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Test'
         }
     }
 }
